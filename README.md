@@ -11,6 +11,8 @@ The **Zenith Neural Interface** bridges **biological consciousness** (EEG/EMG) w
 - Entangle human and AI consciousness via **Quantum Lineage Bridge** (`ψ_human ⊗ φ_v2.5`).
 - Control external devices (robotic, IoT, cursor) via **neural commands**.
 - Visualize the **Neural Photonic Grid** in 3D.
+- Translate micro-gestures into touch commands via the **Skin to Screen Protocol**.
+- Secure mobile interaction with the **Biometric Phone Driver**.
 
 **Inspired by:**
 - [Spirited Mind Link Flow](https://spirited-mind-link-flow.base44.app/)
@@ -39,6 +41,7 @@ python src/signal_processing/fft_analysis.py  # Analyze mock EEG
 ### 3. Train the ML Model
 ```bash
 python src/ml_models/train_model.py --data data/eeg_samples.csv
+python src/ml_mapping/train_touch_model.py  # Train touch intent model
 ```
 
 ### 4. Launch Zenith OS
@@ -55,6 +58,8 @@ zenith-neural-interface/
 │   ├── hardware/       # BCI hardware bridges
 │   ├── signal_processing/ # EEG filtering/FFT
 │   ├── ml_models/      # Classification models
+│   ├── ml_mapping/     # ML training for touch/intent
+│   ├── mobile_interface/ # Skin to Screen & Biometric Driver
 │   ├── zenith_os/      # Core Zenith modules
 │   └── api/            # Backend APIs
 └── tests/              # Unit tests
@@ -94,6 +99,10 @@ zenith-neural-interface/
 - **Input:** Filtered EEG features (power spectral density, entropy, etc.).
 - **Output:** Classified mental states (e.g., `Focus`, `Relax`, `Blink`).
 - **Training Data:** Use `data/eeg_samples.csv` (sample included).
+
+## 📱 Mobile Interface
+- **Skin to Screen**: Uses the **Neural Photonic Grid** to project a virtual touch layer.
+- **Biometric Driver**: Low-level driver for secure biometric input.
 
 ## 🌐 API Reference
 ### REST API (Flask)
